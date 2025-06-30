@@ -1,0 +1,7 @@
+{
+  "ProperViewStack": {
+    "PropertiesAPIEndpoint5F4AB459": "https://8fhf6xuv31.execute-api.us-east-1.amazonaws.com/prod/",
+    "DynamoTableName": "Properties",
+    "APIGatewayURL": "https://8fhf6xuv31.execute-api.us-east-1.amazonaws.com/prod/"
+  }
+}

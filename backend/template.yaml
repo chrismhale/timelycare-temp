@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: ProperView Lambda Backend
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+
+Resources:
+  GetPropertiesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/getProperties/
+      Handler: index.handler
+      Events:
+        GetAll:
+          Type: Api
+          Properties:
+            Path: /properties
+            Method: get
+
+  CreatePropertyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/createProperty/
+      Handler: index.handler
+      Events:
+        Create:
+          Type: Api
+          Properties:
+            Path: /properties
+            Method: post
+
+  UpdatePropertyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/updateProperty/
+      Handler: index.handler
+      Events:
+        Update:
+          Type: Api
+          Properties:
+            Path: /properties/{id}
+            Method: put
+
+  DeletePropertyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/deleteProperty/
+      Handler: index.handler
+      Events:
+        Delete:
+          Type: Api
+          Properties:
+            Path: /properties/{id}
+            Method: delete
+
+  SubmitInquiryFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/submitInquiry/
+      Handler: index.handler
+      Events:
+        Inquiry:
+          Type: Api
+          Properties:
+            Path: /inquiries
+            Method: post

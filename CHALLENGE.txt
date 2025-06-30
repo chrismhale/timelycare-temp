@@ -1,0 +1,52 @@
+ProperView – Real Estate Listing & Management Platform Coding
+Challenge
+Overview
+You're building ProperView, a real estate listing and management platform used by agents to:
+- Add and manage property listings
+- Track inquiries from potential buyers
+- View basic analytics on listing performance
+This challenge is designed to assess your ability to design and implement a full stack
+application using modern technologies, for example React, Next.js, Node.js, and TypeScript.
+Your solution should emphasize clean architecture, maintainability, and a professional-grade
+developer experience.
+Utilizing an AI powered IDE is optional but preferred.
+Requirements
+Agent Dashboard
+- Login as a mock “agent” (no full auth system required, just simulate login)
+- View all property listings created by the agent
+- Create a new property listing with the following fields:
+- Title
+- Price
+- Address
+- Bedrooms
+- Bathrooms
+- Description
+- Status (`active`, `pending`, `sold`)
+- Edit or delete property listings
+Public Listings Page
+- Visitors can browse publicly available ("active") listings
+- Filter by:
+- Price range
+- Bedrooms
+- Location
+- View property details
+- Submit an inquiry
+Backend
+Endpoints:
+- `GET /properties` – List all public properties
+- `GET /agent/properties` – List all agent-owned properties
+- `POST /properties` – Create new property
+- `PUT /properties/:id` – Update property
+- `DELETE /properties/:id` – Delete property
+- `POST /inquiries` – Submit a buyer inquiry
+Database:
+- Provide a seed script to populate 5–10 sample listings
+Submission Instructions
+- Submit a GitHub repo link (preferred) or a ZIP file
+- Ensure your README includes clear setup instructions
+- Feel free to include a short note on what you'd improve with more time
+Interview followup
+You’ll be invited to:
+- Walk through your solution with our engineering team
+- Discuss your approach, tradeoffs, and reasoning
+- Potentially implement a small change live

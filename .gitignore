@@ -1,0 +1,36 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Environment files
+.env*
+
+# Build / cache outputs
+# Next.js
+web/.next/
+web/.open-next/
+web/out/
+
+# SST / Pulumi
+.sst/
+infra/.sst/
+infra/cdk.out/
+
+# Coverage reports
+coverage/
+**/coverage/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# macOS / Windows junk
+.DS_Store
+Thumbs.db

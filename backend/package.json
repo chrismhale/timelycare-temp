@@ -1,0 +1,32 @@
+{
+  "name": "properview-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --config jest.config.js --coverage --runInBand --verbose",
+    "lint": "eslint functions/**/*.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "echo 'Backend build handled by AWS SAM'"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.150",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "jest": "^30.0.3",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.4.5"
+  }
+}

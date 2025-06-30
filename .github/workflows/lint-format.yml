@@ -1,0 +1,45 @@
+name: Code Quality Checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-format:
+    name: Lint and Prettier Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install frontend dependencies
+        working-directory: client
+        run: npm ci
+
+      - name: Run ESLint on frontend
+        working-directory: client
+        run: npm run lint
+
+      - name: Run Prettier format check on frontend
+        working-directory: client
+        run: npm run format:check
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: npm ci
+
+      - name: Run ESLint on backend
+        working-directory: backend
+        run: npm run lint
+
+      - name: Run Prettier format check on backend
+        working-directory: backend
+        run: npm run format:check

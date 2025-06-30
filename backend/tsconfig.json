@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "rootDir": "./",
+    "outDir": "./build"
+  },
+  "include": [
+    "functions/**/*.ts",
+    "tests/**/*.ts",
+    "integration/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+} 
